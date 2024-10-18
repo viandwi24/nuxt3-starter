@@ -1,2 +1,12 @@
 run = "bun run dev"
-modules = ["nodejs-20", "vue-node-20", "bun-1.1"]
+modules = ["bun-1.1", "vue-node-20"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "bun run dev"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
