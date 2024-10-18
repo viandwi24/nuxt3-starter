@@ -1,0 +1,17 @@
+run = "sh bun.cfg/preload.sh && bun run dev"
+onBoot = "sh bun.cfg/onBoot.sh"
+hidden=['bun.cfg', 'yarn.lock', 'package-lock.json']
+modules = ["nodejs-20", "vue-node-20"]
+
+[env]
+PATH="/home/runner/.bun/bin"
+
+[nix]
+channel = "stable-21_11"
+
+[packager]
+language = "nodejs"
+
+[packager.features]
+packageSearch = true
+guessImports = false
